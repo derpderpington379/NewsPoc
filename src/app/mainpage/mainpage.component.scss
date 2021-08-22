@@ -1,0 +1,137 @@
+@import "../../mixins";
+@import "../../variables";
+
+.news-wrapper {
+    @include for-size(phone-only) {
+        width: 96%;
+    }
+    @include for-size(tablet-portrait-up) {
+        width: 90%;
+    }
+    @include for-size(tablet-landscape-up) {
+        width: 70%;
+    }
+    @include for-size(desktop-up) {
+        width: 60%;
+    }
+    @include for-size(big-desktop-up) {
+        width: 60%;
+    }
+    height: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+.article {
+    background-color: $primary-color;
+    box-shadow: 0px 3px 15px rgba(167, 167, 167, 0.2);
+    margin: 1rem 0rem 1rem 0rem;
+    display: flex;
+    cursor: pointer;
+    img {
+        object-fit: cover;
+        align-items: center;
+        @include for-size(phone-only) {
+            width: 10rem;
+            height: 8rem;
+        }
+        @include for-size(tablet-portrait-up) {
+            width: 20rem;
+            height: 15rem;
+        }
+        @include for-size(tablet-landscape-up) {
+            width: 20rem;
+            height: 15rem;
+        }
+        @include for-size(desktop-up) {
+            width: 30rem;
+            height: 20rem;
+        }
+        @include for-size(big-desktop-up) {
+            width: 30rem;
+            height: 20rem;
+        }
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        margin: 1rem;
+        @include for-size(phone-only) {
+            margin: auto;
+        }
+    }
+    .article-content {
+        @include for-size(phone-only) {
+            border-left: none;
+            margin: auto;
+            width: 10rem;
+            height: 8rem;
+        }
+        @include for-size(tablet-portrait-up) {
+            width: 20rem;
+            height: 15rem;
+        }
+        @include for-size(tablet-landscape-up) {
+            width: 20rem;
+            height: 15rem;
+        }
+        @include for-size(desktop-up) {
+            width: 30rem;
+            height: 20rem;
+        }
+        @include for-size(big-desktop-up) {
+            width: 30rem;
+            height: 20rem;
+        }
+        align-items: center;
+        background-color: $primary-color;
+        padding: 1rem;
+        border-left: 1px solid $primary-text-color;
+        margin: 1rem;
+        .article-title {
+            padding-bottom: 1rem;
+        }
+        .article-title p {
+            @include for-size(phone-only) {
+                margin: auto;
+                width: 50%;
+            }
+            @include for-size(tablet-portrait-up) {
+                margin: auto;
+            }
+        }
+        .article-inner {
+            padding: 0rem 0.4rem 0.4rem 0.4rem;
+            width: fit-content;
+            @include for-size(phone-only) {
+                display: none;
+            }
+            @include for-size(tablet-portrait-up) {
+                display: unset;
+            }
+            @include for-size(tablet-landscape-up) {
+                display: unset;
+            }
+            @include for-size(desktop-up) {
+                display: unset;
+            }
+            @include for-size(big-desktop-up) {
+                display: unset;
+            }
+            .article-author h4 {
+                color: $secondary-text-color;
+            }
+        }
+    }
+}
+
+.article:hover {
+    background-color: white;
+    img {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -ms-filter: none;
+        filter: none;
+    }
+    .article-content {
+        background-color: white;
+    }
+}

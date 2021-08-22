@@ -1,0 +1,18 @@
+<div class="news-wrapper" *ngIf="articles">
+  <div class="article" *ngFor="let article of articles" [routerLink]="['/article/', article.title]">
+    <img src="{{ article.urlToImage}}" />
+    <div class="article-content">
+      <div class="article-title">
+        <h3>{{ article.title}}</h3>
+      </div>
+      <div class="article-inner">
+        <div class="article-author">
+          <h4>{{ article.author}} - {{ article.publishedAt | date:'fullDate'}}</h4>
+        </div>
+        <div class="article-description">
+          <p>{{ article.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

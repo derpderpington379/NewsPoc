@@ -1,0 +1,12 @@
+<div class="article" *ngIf="article">
+    <h3>{{article.title}}</h3>
+    <img src="{{article.urlToImage}}">
+    <div class="text">
+        <div>
+            <h4>{{article.author}} - {{article.publishedAt | date}}</h4>
+        </div>
+        <div>
+            <p>{{article.content}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+@import "../variables";
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.wrapper .row.header {
+  flex: 0 1 auto;
+}
+.wrapper .row.content {
+  flex: 1 1 auto;
+  height: 50vh;
+}
+.wrapper .row.footer {
+  flex: 0 1 5vh;
+  background-color: $primary-text-color;
+}

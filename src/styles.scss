@@ -1,0 +1,121 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    width: 100%;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: $primary-color;
+    color: $primary-text-color;
+    font-family: $primary-font;
+}
+
+h1 {
+    font-family: $secondary-font;
+    font-weight: 900;
+    text-transform: uppercase;
+    
+    @include for-size(phone-only) {
+        font-size: 2.4rem;
+    }
+    @include for-size(tablet-portrait-up) {
+        font-size: 4rem;
+    }
+    @include for-size(tablet-landscape-up) {
+        font-size: 6rem;
+    }
+    @include for-size(desktop-up) {
+        font-size: 7rem;
+    }
+    @include for-size(big-desktop-up) {
+        font-size: 8rem;
+    }
+}
+
+h2 {
+    font-family: $primary-font;
+    @include for-size(phone-only) {
+        font-size: 0.8rem;
+    }
+    @include for-size(tablet-portrait-up) {
+        font-size: 1rem;
+    }
+    @include for-size(tablet-landscape-up) {
+        font-size: 1rem;
+    }
+    @include for-size(desktop-up) {
+        font-size: 1.2rem;
+    }
+    @include for-size(big-desktop-up) {
+        font-size: 1.4rem;
+    }
+}
+
+h3 {
+    font-family: $tertiary-font;
+    font-weight: 900;
+    @include for-size(phone-only) {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    @include for-size(tablet-portrait-up) {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+    @include for-size(tablet-landscape-up) {
+        font-size: 1.5rem;
+        line-height:1.5rem;
+    }
+    @include for-size(desktop-up) {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    @include for-size(big-desktop-up) {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+    }
+}
+
+h4 {
+    font-family: $secondary-font;
+    @include for-size(phone-only) {
+        font-size: 0.6rem;
+    }
+    @include for-size(tablet-portrait-up) {
+        font-size: 1rem;
+    }
+    @include for-size(tablet-landscape-up) {
+        font-size: 1.4rem;
+    }
+    @include for-size(desktop-up) {
+        font-size: 1rem;
+    }
+    @include for-size(big-desktop-up) {
+        font-size: 1rem;
+    }
+}
+
+p {
+    font-family: $secondary-font;
+    font-weight: 400;
+    @include for-size(phone-only) {
+        font-size: 0.8rem;
+    }
+    @include for-size(tablet-portrait-up) {
+        font-size: 1.2rem;
+    }
+    @include for-size(tablet-landscape-up) {
+        font-size: 1.4rem;
+    }
+    @include for-size(desktop-up) {
+        font-size: 1.6rem;
+    }
+    @include for-size(big-desktop-up) {
+        font-size: 1.6rem;
+    }
+}
